@@ -1,0 +1,20 @@
+{
+    "python.terminal.useEnvFile": true,
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": true
+                }
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "dpg-dbldrigae00c73bvkb0g-a.oregon-postgres.render.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Render PostgreSQL",
+            "database": "enterprise_ai_w0es",
+            "username": "enterprise_user"
+        }
+    ]
+}
