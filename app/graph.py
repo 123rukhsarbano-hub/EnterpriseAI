@@ -28,8 +28,7 @@ def retrieve(s):
     
     hits=search(p.tenant, embed(query), p.groups, p.subject)
     hits=[h for h in hits if h['score'] >= setting().min_relevance]
-    sources=[{'index': i+1, 'document_id': h['metadata'].get('document_id', ''), 'title': h['metadata'].get('title', ''), 
-              'page': h['metadata'].get('page', 1), 'excerpt': h['metadata'].get('text', '')[:320]} h for i,h in enumerate(hits)]
+    sources=[{'index':i+1,'document_id':h['metadata'].get('document_id',''),'title':h['metadata'].get('title',''), 'page':h['metadata'].get('page',1),'excerpt':h['metadata'].get('text','')[:320]} for i,h in enumerate(hits)]
     
     return {'passages': hits, 'sources': sources}
 

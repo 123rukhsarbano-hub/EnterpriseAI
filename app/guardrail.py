@@ -29,7 +29,7 @@ def classify_input(question: str) -> str | None:
     return None
 
 def check_input(question: str) -> str:
-    reason = classify_input(question):
+    reason = classify_input(question)
     if reason:
         raise HTTPException(status_code=400, detail=f'Input guardrail blocked this request ({reason}).')
     return question
